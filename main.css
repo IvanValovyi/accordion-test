@@ -1,0 +1,85 @@
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.accordion-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 32px 8px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.02), 0px 4px 17px rgba(0, 0, 0, 0.14), 0px 4px 22px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+.accordion-list .accordion-item .trigger {
+  cursor: pointer;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #D0DBF1;
+}
+.accordion-list .accordion-item .trigger .label {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  transition: 0.3s;
+  color: #0D2A54;
+}
+.accordion-list .accordion-item .trigger svg {
+  transition: 0.3s;
+  transform: rotate(0deg);
+  color: #0D2A54;
+}
+.accordion-list .accordion-item .content {
+  transform: scale(0);
+  opacity: 0;
+  background: #FAF8F6;
+}
+.accordion-list .accordion-item .content p {
+  padding: 16px;
+}
+.accordion-list .accordion-item.was-active .content {
+  transition: 0.3s;
+}
+.accordion-list .accordion-item.active .trigger .label {
+  color: #2B41B7;
+}
+.accordion-list .accordion-item.active .trigger svg {
+  transform: rotate(180deg);
+  color: #2B41B7;
+}
+.accordion-list .accordion-item.active .content {
+  opacity: 1;
+  transform: scale(1);
+  border-bottom: 1px solid #D0DBF1;
+}
+.accordion-list .accordion-item:last-child .trigger,
+.accordion-list .accordion-item:last-child .content {
+  border-bottom: 0;
+}
+@media (min-width: 768px) {
+  .accordion-list {
+    margin-top: 152px;
+    max-width: 600px;
+  }
+  .accordion-list .accordion-item .trigger,
+  .accordion-list .accordion-item .content p {
+    padding: 24px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
